@@ -1,0 +1,16 @@
+{
+  "name": "github-artifacts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild index.html --bundle --outfile=dist/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-table": "^1.21.1",
+    "esbuild": "^0.15.15"
+  }
+}
