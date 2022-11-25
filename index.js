@@ -68,7 +68,7 @@ async function main() {
     }
 
     // Write output to file
-    fs.writeFileSync('www/artifacts.json', JSON.stringify(artifactsOut, null, 2));
+    fs.writeFileSync('docs/artifacts.json', JSON.stringify(artifactsOut, null, 2));
 
 }
 
