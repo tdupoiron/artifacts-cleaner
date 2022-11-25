@@ -1,0 +1,22 @@
+{
+  "name": "artifacts-cleaner",
+  "version": "1.0.0",
+  "description": "Clean old artifacts in an organization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdupoiron/artifacts-cleaner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tdupoiron/artifacts-cleaner/issues"
+  },
+  "homepage": "https://github.com/tdupoiron/artifacts-cleaner#readme",
+  "dependencies": {
+    "@octokit/rest": "^19.0.5"
+  }
+}
