@@ -1,5 +1,6 @@
 // Require libraries
 const { Octokit } = require("@octokit/rest");
+const fs = require('fs');
 
 // Init constants
 const org = "tdupoiron-org";
@@ -65,6 +66,10 @@ async function main() {
             artifactsOut.push(output);
         }
     }
+
+    // Write output to file
+    fs.writeFileSync('www/artifacts.json', JSON.stringify(artifactsOut, null, 2));
+
 }
 
 main();
