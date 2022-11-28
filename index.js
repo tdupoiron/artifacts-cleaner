@@ -56,8 +56,16 @@ async function main() {
             const output = {
                 "repoId": currentRepo.id,
                 "repoName": currentRepo.name,
+                "repoVisibility": currentRepo.visibility,
+                "repoUrl": currentRepo.html_url,
+                "repoOwnerType": currentRepo.owner.type,
+                "repoOwnerLogin": currentRepo.owner.login,
+                "repoOwnerUrl": currentRepo.owner.html_url,
                 "artifactId": currentArtifact.id,
                 "artifactName": currentArtifact.name,
+                "artifactDownloadUrl": currentArtifact.archive_download_url,
+                "workflowRunId": currentArtifact.workflow_run.id,
+                "workflowRunUrl": currentRepo.html_url + "/actions/runs/" + currentArtifact.workflow_run.id,
                 "size": currentArtifact.size_in_bytes,
                 "created_at": currentArtifact.created_at,
                 "expires_at": currentArtifact.expires_at

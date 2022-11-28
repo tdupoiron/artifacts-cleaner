@@ -1,36 +1,25 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>GitHub Artifacts</title>
-        <link href="assets/css/bootstrap-table.min.css" rel="stylesheet">
+        <link href="node_modules/bootstrap-table/dist/bootstrap-table.min.css" rel="stylesheet">
+        <link href="node_modules/bootstrap-table/dist/bootstrap-table-locale-all.min.js" rel="stylesheet">
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/artifacts.css" rel="stylesheet">
     </head>
 
     <body>
 
-        <script src="./assets/data/artifacts.json"></script>
+        <h1>GitHub Artifacts</h1>
 
-        <h1>Documentation</h1>
-        <table
-        id="table"
-        data-toggle="table"
-        data-url="./assets/data/artifacts.json"
-        data-pagination="true"
-        data-search="true"
-        data-mobile-responsive="true"
-        data-show-columns="true"
-        >
-            <thead>
-                <tr>
-                    <th data-field="repoName">Repository</th>
-                    <th data-field="artifactName">Name</th>
-                    <th data-field="size">Size</th>
-                    <th data-field="created_at">Creation Date</th>
-                    <th data-field="expires_at">Expiration Date</th>
-                </tr>
+        <table class="table">
+            <thead class="table-dark">
+
             </thead>
         </table>
-
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/bootstrap-table.min.js"></script>
+        
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap-table/dist/bootstrap-table.min.js"></script>
+        <script src="assets/js/artifacts.js"></script>
 
     </body>
 </html>
