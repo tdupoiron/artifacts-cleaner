@@ -38,6 +38,7 @@ async function getArtifacts(owner, repo) {
 async function main() {
 
     var artifactsOut = [];
+    var totalSize = 0;
 
     // Get all repositories
     const repos = await getRepos(org);
@@ -71,9 +72,15 @@ async function main() {
                 "expires_at": currentArtifact.expires_at
             };
 
+            totalSize += currentArtifact.size_in_bytes;
             artifactsOut.push(output);
         }
     }
+
+    /*var output = {
+        "totalSize": totalSize,
+        "artifacts": artifactsOut
+    };*/
 
     // Write output to file
     fs.writeFileSync('docs/assets/data/artifacts.json', JSON.stringify(artifactsOut, null, 2));

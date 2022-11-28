@@ -7,6 +7,8 @@ $('.table').bootstrapTable({
     pageSize: 10,
     search: true,
     sorting: true,
+    sortName: 'size',
+    sortOrder: 'desc',
     columns: [
     {
         field: 'repoOwnerLogin',
