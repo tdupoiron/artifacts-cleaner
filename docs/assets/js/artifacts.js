@@ -1,3 +1,5 @@
+import prettyBytes from '../../node_modules/pretty-bytes/index.js';
+
 $('.table').bootstrapTable({
     url: 'assets/data/artifacts.json',
     pagination: true,
@@ -40,13 +42,21 @@ $('.table').bootstrapTable({
         title: 'Size',
         sortable: true,
         formatter: function (value, row, index) {
-            return value + ' bytes';
+            return prettyBytes(value);
         }
     }, {
         field: 'created_at',
         title: 'Created',
+        sortable: true,
+        formatter: function (value, row, index) {
+            return new Date(value).toLocaleString();
+        }
     }, {
         field: 'expires_at',
         title: 'Expires',
+        sortable: true,
+        formatter: function (value, row, index) {
+            return new Date(value).toLocaleString();
+        }
     }]
 });
